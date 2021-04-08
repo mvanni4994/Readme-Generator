@@ -77,7 +77,7 @@ inquirer.prompt([
     
     const data = `
 
-## ${response.title}
+## ${response.title} ${badge}
 
 ## Table of Contents
 * [Description](#description)
