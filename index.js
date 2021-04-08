@@ -2,7 +2,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer')
 // TODO: Create an array of questions for user input
-const questions = [{
+inquirer.prompt([
+    {
     type: "input",
     name: "title",
     message: "Please input the title of your Project:",
@@ -36,7 +37,7 @@ const questions = [{
     type: "list",
     name: "license",
     message: "Which license would you like to select for your application?",
-    choices: ['MIT', 'AGPL','GPL'],
+    choices: ['MIT', 'Apache','ISC'],
 },
 {
     type: "input",
@@ -53,13 +54,11 @@ const questions = [{
     name: "repo",
     message: "Please input the link to your repo:",
 },
-];
+]).then((response) => {
+    console.log(response);
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+    // TODO: Create a function to write README file
+fs.writeToFile(README.md, data, (error) => {
+    error ? console.error(error) :console.log("success!")
+    });
+});
