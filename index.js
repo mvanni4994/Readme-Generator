@@ -64,6 +64,8 @@ inquirer.prompt([
 ]).then((response) => {
     console.log(response)
 
+// grab badges from img.shields.io
+
     if(response.license === 'MIT'){
         badge = '[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
     }else if(response.license === 'Apache'){
