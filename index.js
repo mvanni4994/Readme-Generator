@@ -14,6 +14,17 @@ inquirer.prompt([
     message: "Please input a description of your Project:",
 },
 {
+    type: 'input',
+    name:'url',
+    message: "Please provide the URL of your deployed application.",
+},
+{
+    type: 'input',
+    name:'image',
+    message: "Please provide an image link of your deployed application.",
+},
+
+{
     type: "input",
     name: "installation",
     message: "Please input any instructions on how to install:",
@@ -37,7 +48,7 @@ inquirer.prompt([
     type: "list",
     name: "license",
     message: "Which license would you like to select for your application?",
-    choices: ['MIT', 'Apache','ISC'],
+    choices: ['MIT', 'Apache','GPL'],
 },
 {
     type: "input",
@@ -52,12 +63,19 @@ inquirer.prompt([
 
 ]).then((response) => {
     console.log(response)
+
+    if(response.license === 'MIT'){
+        badge = '[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+    }else if(response.license === 'Apache'){
+        badge = '[![Apache](https://img.shields.io/badge/License-Apache-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+    }else if(response.license === 'GPL'){
+        badge = '[![GPL](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)';
+    };
+    
     
     const data = `
-# ${response.name}
 
-## Title
-${response.title}
+## ${response.title}
 
 ## Table of Contents
 * [Description](#description)
@@ -72,7 +90,7 @@ ${response.title}
 ${response.description}
 
 ## URL
-[Click here to see the live site!](${response.url})
+[Deployed Site:](${response.url})
 ![Screenshot Deployed Website](${response.image})
 
 ## Installation
