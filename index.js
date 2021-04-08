@@ -49,16 +49,54 @@ inquirer.prompt([
     name: "email",
     message: "Please input your email address:",
 },
-{
-    type: "input",
-    name: "repo",
-    message: "Please input the link to your repo:",
-},
-]).then((response) => {
-    console.log(response);
 
-    // TODO: Create a function to write README file
-fs.writeToFile(README.md, data, (error) => {
-    error ? console.error(error) :console.log("success!")
-    });
+]).then((response) => {
+    console.log(response)
+    
+    const data = `
+# ${response.name}
+
+## Title
+${response.title}
+
+## Table of Contents
+* [Description](#description)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [Tests](#testing)
+* [Questions](#questions)
+* [License](#license)
+
+## Description 
+${response.description}
+
+## URL
+[Click here to see the live site!](${response.url})
+![Screenshot Deployed Website](${response.image})
+
+## Installation
+${response.installation}
+
+## Usage
+${response.usage}
+
+## Contributing
+${response.contributions}
+
+## Testing
+${response.testing}
+
+## Questions
+Please contact me below with any questions you have about the appiction.
+* Github: https://github.com/${response.github}
+* Email: ${response.email}
+
+## License
+${response.license}`
+   
+    fs.writeFile('README.md', data, (error) => {
+
+        error ? console.error(error) : console.log('success!')
+    })
 });
