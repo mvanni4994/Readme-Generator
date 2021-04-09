@@ -40,11 +40,6 @@ inquirer.prompt([
     message: "How would you like other devs to contribute to your application?",
 },
 {
-    type: "input",
-    name: "testing",
-    message: "Please provide instructions on how to use your application:",
-},
-{
     type: "list",
     name: "license",
     message: "Which license would you like to select for your application?",
@@ -84,7 +79,6 @@ inquirer.prompt([
 * [Installation](#installation)
 * [Usage](#usage)
 * [Contributing](#contributing)
-* [Tests](#testing)
 * [Questions](#questions)
 * [License](#license)
 
@@ -103,9 +97,6 @@ ${response.usage}
 
 ## Contributing
 ${response.contributions}
-
-## Testing
-${response.testing}
 
 ## Questions
 Please contact me below with any questions you have about the appiction.
