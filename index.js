@@ -92,7 +92,7 @@ inquirer.prompt([
 ${response.description}
 
 ## URL
-[Deployed Site:](${response.url})
+[Deployed Site](${response.url})
 ![Screenshot Deployed Website](${response.image})
 
 ## Installation
