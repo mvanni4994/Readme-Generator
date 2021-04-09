@@ -2,6 +2,10 @@
 
 ## Readme-Generator [![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Walkthrough Video
+
+https://drive.google.com/file/d/1fcXcIhMa0CI40LxhVCHrwRpRoLIy4LAs/view
+
 ## Table of Contents
 * [Description](#description)
 * [Installation](#installation)
