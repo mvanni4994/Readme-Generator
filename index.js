@@ -85,7 +85,7 @@ inquirer.prompt([
 ## Description 
 ${response.description}
 
-## [Deployed Site](${response.url})
+## [Click here for the deployed site](${response.url})
 
 ## Images
 ![Screenshot Deployed Website](${response.image})
@@ -112,3 +112,6 @@ ${response.license}`
         error ? console.error(error) : console.log('success!')
     })
 });
+
+// https://mvanni4994.github.io/Readme-Generator/
+// https://github.com/mvanni4994/Readme-Generator/blob/main/assets/Capture.JPG?raw=true

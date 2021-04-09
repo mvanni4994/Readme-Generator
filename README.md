@@ -13,7 +13,7 @@
 ## Description 
 An application that generates a Readme file through user response in a terminal
 
-## [Deployed Site]()
+## [Click here for the deployed site](https://mvanni4994.github.io/Readme-Generator/)
 
 ## Images
 ![Screenshot Deployed Website](https://github.com/mvanni4994/Readme-Generator/blob/main/assets/Capture.JPG?raw=true)
