@@ -11,14 +11,15 @@
 * [License](#license)
 
 ## Description 
-An application that generates a Readme file through user response in a terminal.
+An application that generates a Readme file through user response in a terminal
 
-## URL
-[Deployed Site]()
-![Screenshot Deployed Website]()
+## [Deployed Site]()
+
+## Images
+![Screenshot Deployed Website](https://github.com/mvanni4994/Readme-Generator/blob/main/assets/Capture.JPG?raw=true)
 
 ## Installation
-In the user terminal, run npm i, npm i inquirer & npm  i fs. Once those dependencies are installed, run node index.js and respond to the fields given to you.
+In the user terminal, run npm i, npm i inquirer & npm i fs. Once those dependencies are installed, run node index.js and respond to the fields given to you.
 
 ## Usage
 The Readme Generator is an application used to generate a Readme.md
